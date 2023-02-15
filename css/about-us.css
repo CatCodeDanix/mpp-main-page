@@ -100,7 +100,7 @@ body {
 }
 
 .hero-image {
-  background-image: url(../images/hero-image-large.png);
+  background-image: url(https://daniums.ir/0:/Personal/Main%20Page/images/hero-image-large.png);
   background-color: #f4fff4;
   background-size: contain;
   background-repeat: no-repeat;
@@ -337,7 +337,7 @@ article {
 
 @media screen and (max-width: 600px) {
   .hero-image {
-    background-image: url(../images/hero-image-mobile.png);
+    background-image: url(https://daniums.ir/0:/Personal/Main%20Page/images/hero-image-mobile.png);
     background-position: top center;
   }
   #menu-icon {
