@@ -147,7 +147,7 @@ body {
 }
 
 .hero-image {
-  background-image: url(../images/hero-image-large.png);
+  background-image: url(https://daniums.ir/0:/Personal/Main%20Page/images/hero-image-large.png);
   background-color: #f4fff4;
   background-repeat: no-repeat;
   background-position: center;
@@ -204,7 +204,7 @@ a:active {
 }
 
 #reservation-terms {
-  background: url(../images/eyd.jpg);
+  background: url(https://daniums.ir/0:/Personal/Main%20Page/images/eyd.jpg);
   background-color: rgba(237, 160, 211, 0.549);
   background-position: center;
   background-repeat: no-repeat;
@@ -598,7 +598,7 @@ a:active {
 
 @media screen and (max-width: 600px) {
   .hero-image {
-    background-image: url(../images/hero-image-mobile.png);
+    background-image: url(https://daniums.ir/0:/Personal/Main%20Page/images/hero-image-mobile.png);
     background-position: 0 320px;
   }
   h1 {
