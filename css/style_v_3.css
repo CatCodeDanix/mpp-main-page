@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: inherit;
+  font-feature-settings: "ss01";
 }
 
 .sample_farsi_digits {
@@ -11,6 +12,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow: auto;
   width: 100%;
 }
 
@@ -21,10 +23,71 @@ body {
   font-family: "Vazirmatn", sans-serif;
   scroll-behavior: smooth;
   width: 100%;
+  position: relative;
+}
+
+#banner {
+  position: absolute;
+  top: 130px;
+  right: 0;
+  width: 60vw;
+  height: 50px;
+  z-index: 4;
+  min-width: 100px;
+  max-width: 200px;
+  border-radius: 10px 0 0 10px;
+  background-color: #6b39bd;
+  border: 3px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#banner > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#banner p {
+  padding: 1rem;
+  margin-top: -3px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bolder;
+  animation: neon 1s ease infinite;
 }
 
 #main-header {
   display: block;
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-heading-container {
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+  height: 475px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-heading-container > h1 {
+  width: 811px;
+}
+
+#menu-icon {
+  width: 60px;
+}
+
+#offcanvas-link-list li > a {
+  padding: 1rem;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid #333;
 }
 
 #top-nav {
@@ -140,11 +203,156 @@ a:active {
   color: initial;
 }
 
+#reservation-terms {
+  background: url(../images/eyd.jpg);
+  background-color: rgba(237, 160, 211, 0.549);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: 9.2rem;
+  justify-content: center;
+}
+
+.reservation-terms-heading {
+  padding: 0.55rem;
+  background-color: hsl(168, 76%, 70%);
+  display: inline-block;
+  border-radius: 14px;
+  line-height: 40px;
+}
+
+.reservation__body li {
+  margin: 1rem auto;
+  border-radius: 7px;
+  padding: 0.3rem 0.3rem;
+  font-weight: 500;
+  background-color: rgba(17, 221, 250, 0.7);
+}
+
+/* .reservation__body li:before {
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 4px;
+  position: relative;
+  right: -28px;
+  top: 5px;
+  z-index: -1;
+  background-color: rgba(26, 188, 156, 0.8);
+} */
+
+#reservation-terms header {
+  text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);
+}
+
+#reservation-terms header,
+.reservation__body {
+  display: block;
+  width: 100%;
+}
+
+.reservation__body ul {
+  list-style: none;
+}
+
+.reservation__body li {
+  font-size: 1.2rem;
+}
+
+.reservation__body-link-to-terms {
+  padding: 3px;
+  display: inline-block;
+  border-radius: 17px;
+  background-color: #f27e51;
+}
+
+#which-pansion {
+  margin: 3rem 0;
+  transform: skewY(-4deg);
+}
+
+#why-us {
+  margin: 3rem 0;
+  margin-top: 9.5rem;
+  transform: skewY(+4deg);
+}
+
+#which-pansion > div,
+#why-us > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+#which-pansion > div {
+  background-color: #11ddfa;
+}
+
+#why-us > div {
+  background-color: #f27e51;
+}
+
+.post-img {
+  border-radius: 9px;
+  width: 390px;
+}
+
+.wondering-dog-gif {
+  transform: skewY(4deg);
+}
+
+.why-us-img {
+  transform: skewY(-4deg);
+}
+
+.main-page-post-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.which-pansion__text {
+  transform: skewY(4deg);
+}
+
+.why-us__text {
+  transform: skewY(-4deg);
+}
+
+.which-pansion__text-1,
+.why-us__text-1 {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.which-pansion__text-2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.which-pansion__link,
+.which-pansion__link:link,
+.which-pansion__link:visited,
+.why-us__link,
+.why-us__link:link,
+.why-us__link:visited {
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
 #terms {
   padding: 1rem;
   padding-top: 7rem;
   width: 100vw;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #f4fff4;
 }
 
 .terms__heading {
@@ -249,6 +457,9 @@ a:active {
   .hero-image {
     background-size: contain;
   }
+  .main-heading-container {
+    top: 190px;
+  }
 }
 
 @media screen and (max-width: 1568px) {
@@ -275,7 +486,7 @@ a:active {
     width: 500px;
   }
   h1 {
-    top: 30%;
+    top: 60px;
   }
   .hero-image {
     background-position: 0 120px;
@@ -299,6 +510,9 @@ a:active {
   .hero-image {
     background-position: 0 200px;
   }
+  .main-heading-container {
+    top: 190px;
+  }
 }
 
 @media screen and (max-width: 1026px) {
@@ -310,12 +524,50 @@ a:active {
   }
 }
 
+@media screen and (max-width: 900px) {
+  #which-pansion > div,
+  #why-us > div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+  }
+  #which-pansion > div p,
+  #why-us > div p {
+    text-align: center;
+  }
+  #which-pansion button,
+  #why-us button {
+    margin: 1rem;
+  }
+  .which-pansion__text-1,
+  .why-us__text-1 {
+    font-size: 1.8rem;
+  }
+  .which-pansion__text-2 {
+    font-size: 1.2rem;
+  }
+  .why-us-img {
+    width: 300px;
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 869px) {
+  .h1__main {
+    font-size: 2.8rem;
+  }
+}
+
 @media screen and (max-width: 849px) {
   .h1__main {
     font-size: 2rem;
   }
   .h1__info {
     font-size: 1rem;
+  }
+  .main-heading-container > h1 {
+    width: 440px;
   }
 }
 @media screen and (max-width: 812px) {
@@ -358,6 +610,15 @@ a:active {
   .h1__info {
     font-size: 0.9rem;
   }
+  #menu-icon {
+    width: 47px;
+  }
+  .main-heading-container > h1 {
+    width: 350px;
+  }
+  .main-heading-container {
+    top: 100px;
+  }
 }
 
 @media screen and (max-width: 482px) {
@@ -375,6 +636,9 @@ a:active {
     margin: 0;
     padding-top: 1rem;
   }
+  .main-heading-container {
+    top: 90px;
+  }
 }
 
 @media screen and (max-width: 466px) {
@@ -383,6 +647,12 @@ a:active {
   }
   h1 {
     top: 25%;
+  }
+}
+
+@media screen and (max-width: 464px) {
+  .h1__main {
+    font-size: 1.4rem;
   }
 }
 
@@ -402,8 +672,19 @@ a:active {
   .footer__image {
     width: 170px;
   }
-  .hero-image {
-    /* background-position: 0 390px; */
+  .which-pansion__text-1,
+  .why-us__text-1 {
+    font-size: 1.6rem;
+  }
+  .which-pansion__text-2 {
+    font-size: 1.1rem;
+  }
+  .which-pansion__link,
+  .why-us__link {
+    font-size: 1rem;
+  }
+  .main-heading-container > h1 {
+    width: 90vw;
   }
 }
 
@@ -428,11 +709,31 @@ a:active {
   }
 }
 
+@media screen and (max-width: 384px) {
+  #which-pansion > div {
+    margin-top: 5rem;
+  }
+  .which-pansion__text-1,
+  .why-us__text-1 {
+    font-size: 1.3rem;
+  }
+  .which-pansion__text-2 {
+    font-size: 1rem;
+  }
+}
+
 @media screen and (max-width: 348px) {
   .h1__main {
     font-size: 1.2rem;
   }
   .h1__info {
+    font-size: 0.8rem;
+  }
+  #menu-icon {
+    width: 35px;
+  }
+  .which-pansion__link,
+  .why-us__link {
     font-size: 0.8rem;
   }
 }
@@ -448,6 +749,26 @@ a:active {
   #top-nav {
     padding-right: 0;
   }
+  #which-pansion > div {
+    margin-top: 4rem;
+  }
+  .which-pansion__text-1,
+  .why-us__text-1 {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .which-pansion__text-2 {
+    font-size: 1rem;
+  }
+  .why-us-img {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 304px) {
+  .h1__main {
+    font-size: 1.1rem;
+  }
 }
 
 @media screen and (max-width: 302px) {
@@ -455,6 +776,17 @@ a:active {
     font-size: 0.8rem;
   }
   .nav-item:first-of-type {
+    font-size: 0.8rem;
+  }
+  #which-pansion > div {
+    margin-top: 3rem;
+  }
+  .which-pansion__text-1,
+  .why-us__text-1 {
+    margin-top: 0.7rem;
+    font-size: 1.1rem;
+  }
+  .which-pansion__text-2 {
     font-size: 0.8rem;
   }
 }
@@ -482,8 +814,22 @@ a:active {
   }
 }
 
-/* @media screen and (max-height: 774px) {
-  h1 {
-    top: 19%;
+@media screen and (max-width: 261px) {
+  .h1__main {
+    font-size: 0.9rem;
   }
-} */
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 20px #ef00e3a8,
+      0 0 20px #ef00e3a8, 0 0 2px #fed128, 2px 2px 2px #806914;
+    color: #f5efcb;
+  }
+  50% {
+    text-shadow: 0 0 2px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b,
+      0 0 5px #800e0b, 0 0 2px #800e0b, 4px 4px 2px #40340a;
+    color: #eda0d3;
+  }
+}
