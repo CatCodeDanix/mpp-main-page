@@ -7,8 +7,9 @@ AOS.init({
 // First observer
 const topNav = document.getElementById("top-nav");
 const topNavLogo = topNav.querySelector(".top-nav__left__logo");
+const reservationSection = document.getElementById("reservation-terms");
 
-const mainSectionObserverHandler = function (entries) {
+const reservationSectionObserverHandler = function (entries) {
   const entry = entries[0];
   const elDistanceToTop =
     window.pageYOffset + entry.target.getBoundingClientRect().top;
@@ -24,14 +25,22 @@ const mainSectionObserverHandler = function (entries) {
   }
 };
 
-const mainSectionObserver = new IntersectionObserver(
-  mainSectionObserverHandler,
+const reservationSectionObserver = new IntersectionObserver(
+  reservationSectionObserverHandler,
   { rootMargin: "-90px" }
 );
 
-const mainSection = document.getElementById("reservation-terms");
+reservationSectionObserver.observe(reservationSection);
 
-mainSectionObserver.observe(mainSection);
+// Fixing Refresh in the middle Bug of top navbar
+
+if (
+  window.scrollY >
+  window.pageYOffset + reservationSection.getBoundingClientRect().top
+) {
+  topNavLogo.classList.add("top-nav__left__logo-dynamic");
+  topNav.classList.add("top-nav-dynamic");
+}
 
 // Menu Icon
 const menuIcon = document.getElementById("menu-icon");
